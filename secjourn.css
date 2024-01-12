@@ -1,0 +1,1271 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+main, article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote {
+    quotes: none;
+}
+blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Black';
+    src: url('/fonts/roboto/black.woff2') format('woff2'),
+    url('/fonts/roboto/black.woff') format('woff'),
+    url('/fonts/roboto/black.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Regular';
+    src: url('/fonts/permian/permianseriftypeface-webfont.woff2') format('woff2'),
+    url('/fonts/permian/permianseriftypeface-webfont.woff') format('woff'),
+    url('/fonts/permian/permianseriftypeface-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bold';
+    src: url('/fonts/permian/permianseriftypeface-bold-webfont.woff2') format('woff2'),
+    url('/fonts/permian/permianseriftypeface-bold-webfont.woff') format('woff'),
+    url('/fonts/permian/permianseriftypeface-bold-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Italic';
+    src: url('/fonts/permian/permianseriftypeface-italic-webfont.woff2') format('woff2'),
+    url('/fonts/permian/permianseriftypeface-italic-webfont.woff') format('woff'),
+    url('/fonts/permian/permianseriftypeface-italic-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/fonts/merriweather/merriweather.woff2') format('woff2'),
+    url('/fonts/merriweather/merriweather.woff') format('woff'),
+    url('/fonts/merriweather/merriweather.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lobster';
+    src: url('/fonts/lobster/lobster.woff2') format('woff2'),
+    url('/fonts/lobster/lobster.woff') format('woff'),
+    url('/fonts/lobster/lobster.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    background: #f6f6f6;
+    font: normal 100% 'Regular', sans-serif;
+    color: #000;
+    height: 100%;
+    border: none;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+}
+strong {
+    padding: 0;
+    font-family: 'Bold';
+}
+em {
+    padding: 0;
+}
+q {
+    quotes: "\00ab" "\00bb";
+}
+
+main {
+    max-width: 100%;
+    min-width: 320px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+main::after,
+header::after,
+.centerHeader::after,
+.content::after,
+.articles::after,
+.previewProject,
+.articles .wrapper_words .words
+{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/*main > header, .choose {
+    width: calc(100% - 100px);
+    margin: 25px auto 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.headerLogo {
+    width: 120px;
+    height: 53px;
+    display: block;
+    position: absolute;
+}
+.centerHeader {
+    width: 845px;
+    margin: 0 auto;
+}
+.centerHeaderGlobalMenu {
+    width: 20px;
+    height: 15px;
+    margin: 19px 100px 0 0;
+    float: left;
+}
+.centerHeaderFullSearch {
+    width: 600px;
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.centerHeaderFullSearch input {
+    width: 90%;
+    height: 53px;
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font: 1.875em 'И';
+    background: #fff;
+    border-radius: 3px 0 0 3px;
+    line-height: 45px;
+}
+.centerHeaderFullSearch button {
+    display: block;
+    width: 10%;
+    height: 53px;
+    border: none;
+    float: right;
+    border-radius: 0 3px 3px 0;
+    background: #fff;
+    cursor: pointer;
+}
+.centerHeaderFullSearch button > img {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.centerHeaderOpenUI {
+    width: 25px;
+    height: 25px;
+    margin: 15px 0 0 100px;
+    float: right;
+}
+*/
+
+main > header {
+    width: calc(100% - 100px);
+    margin: 25px auto 0;
+    box-sizing: border-box;
+    position: relative;
+}
+main > header .logo {
+    width: 100px;
+    height: 53px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+    z-index: 1000;
+}
+main > header .globalElements {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin: 14px 0 0;
+    z-index: 1000001;
+}
+main > header .globalElements img {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+}
+main > header .globalElements .menu {
+    cursor: pointer;
+}
+main > header .globalElements img:nth-child(2) {
+    margin: 2px 0 0 50px;
+    vertical-align: -2px;
+}
+main > header .entryPoints {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 15px 50px 0 0;
+    float: right;
+    box-sizing: border-box;
+}
+main > header .entryPoints > a img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+main > header .rightActions {
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+}
+main > header .rightActions > a {
+    display: block;
+}
+
+main nav {
+    width: 200px;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    box-shadow: 3px 0 15px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+}
+main nav > ul {
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 15px;
+
+}
+main nav > ul li {
+    font: .8125em Black;
+    margin-top: 20px;
+    position: relative;
+    line-height: 1;
+}
+main nav > ul li:first-child {
+    margin-top: 0;
+}
+main nav > ul li a {
+    color: #000;
+}
+main nav > ul li a::before {
+    background-color: #000;
+    border-radius: 50%;
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    opacity: 0.15;
+    position: absolute;
+    top: 3px;
+    left: -20px;
+    transition: opacity .5s ease;
+}
+main nav > ul li a:hover::before {
+    opacity: 1;
+}
+main nav .map {
+    position: absolute;
+    bottom: 170px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+main nav .map p {
+    display: inline-block;
+    font: .75em Black;
+    background: #eee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px 7px;
+}
+main nav footer {
+    width: 100%;
+    background: #f6f6f6;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0 25px;
+}
+main nav footer ul {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+main nav footer ul li {
+    display: inline-block;
+    font: .625em Black;
+    margin: 5px 0 0 5px;
+    line-height: 1;
+}
+main nav footer ul li:first-child, main nav footer ul li:last-child {
+    margin-left: 0;
+}
+main nav footer ul li a {
+    color: #999;
+}
+main nav footer ul li a:hover {
+    color: #000;
+}
+main nav footer cite {
+    display: block;
+    font: .625em Black;
+    line-height: 1;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+}
+
+.tags {
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: rgba(0,0,0,.2) -6px 0 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: -110%;
+    z-index: 1000;
+    overflow: auto;
+}
+.tags form {
+    position: relative;
+    width: 160px;
+}
+.tags form .block input {
+    display: none;
+}
+.tags form .block {
+    width: 100%;
+    position: relative;
+    clear: both;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+.tags form .block:nth-child(11){
+    margin-bottom: 55px;
+}
+.tags form .end {
+    margin-bottom: 50px;
+}
+.tags form .block label {
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 100px;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.tags form .block span {
+    font: 1em "Black";
+    float:right;
+    width: 110px;
+    margin: 0;
+    padding: 0;
+}
+.tags form .block input[type=checkbox]:checked + label{
+    background: #1887C0;
+}
+.tags form .block input[type=checkbox]:checked + label:before{
+    left: 21px;
+}
+.tags form .block label:before{
+    transition: .3s ease;
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: #fff;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+.tags form button {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    font: .875em "Black";
+    border: 2px solid #000;
+    padding: 12px 15px;
+    border-radius: 3px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.choose {
+    text-align: center;
+    margin: 50px auto 60px;
+    width: calc(100% - 100px);
+    box-sizing: border-box;
+    position: relative;
+}
+.choose h1 {
+    font: 3.75em 'Black';
+    display: inline-block;
+    cursor: pointer;
+}
+.chooseElement {
+    width: 55px;
+    height: 35px;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.choose .elements {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: none;
+}
+.choose .elements ul {
+    width: 90%;
+    margin: 0 auto;
+    padding: 35px 0;
+    text-align: center;
+}
+.choose .elements ul li {
+    display: inline;
+    padding-left: 40px;
+    font: 2em "Black";
+}
+.choose .elements ul li a {
+    color: #000;
+    border-bottom: 1px solid #ccc;
+}
+.choose .elements ul li:first-child {
+    padding: 0;
+}
+
+.content {
+    max-width: 950px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.contentItem {
+    width: 450px;
+    float: left;
+    position: relative;
+    margin-bottom: 70px;
+    background: #fff;
+}
+
+.previewProject {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto 60px;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+}
+.previewProject .video {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.previewProject .video > img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+.previewProject img {
+    display: block;
+}
+.previewProject a .infoCenter {
+    width: 500px;
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #000;
+}
+.previewProject a .infoCenter h2 {
+    font: 4.5em "Merriweather";
+    line-height: .95em;
+}
+.previewProject a .infoCenter p {
+    font: 1.5em "Bold";
+    line-height: 1.2em;
+    margin-top: 45px;
+}
+.previewProject > a.allProjects {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    display: block;
+    margin-left: -65px;
+    width: 130px;
+    font: .875em "Black";
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+
+}
+.previewProject .player_V {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: none;
+}
+.previewProject .player_V .wrapper_V {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 10%;
+    height: 0;
+    overflow: hidden;
+}
+.previewProject .player_V .wrapper_V > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.previewProject .player_V .close_V {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    z-index: 3000;
+    cursor: pointer;
+}
+
+.contentArticle header {
+    width: 100%;
+    position: relative;
+}
+.contentArticle header .voice {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    text-align: center;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 50%;
+}
+.contentArticle header .voice > img {
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+}
+.contentArticle header > img {
+    width: 450px;
+    height: 450px;
+    display: block;
+    z-index: 1;
+}
+.contentArticle header time {
+    width: 110px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -55px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    padding: 5px 0;
+    font-size: 11px;
+    border-radius: 2px 2px 0 0;
+    background: #fff;
+    color: #222;
+    text-align: center;
+}
+.contentArticle h2 {
+    margin: 30px 30px;
+    font: 1.6em "Merriweather";
+    line-height: 1.2em;
+    color: #000;
+    text-align: center;
+}
+.contentArticle footer {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 0 0 35px;
+    box-sizing: border-box;
+    font-size: 0;
+    text-align: center;
+}
+.contentArticle footer > p {
+    display: inline-block;
+    font: 12px "Black";
+    background: #eee;
+    padding: 3px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.contentArticle footer > p a {
+    color: #000;
+}
+.contentArticle footer .fav {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 25px 0 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.contentArticle footer .fav > img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.contentInterview .header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    z-index: 2;
+}
+.contentInterview .header p {
+    position: absolute;
+    bottom: 130px;
+    left: 25px;
+    right: 25px;
+    font: 1em "Bold";
+    color: #fff;
+    line-height: 1.35em;
+}
+.contentInterview .header h2 {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    right: 25px;
+    margin-bottom: 30px;
+    font: 1.6em "Merriweather";
+    line-height: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+.contentInterview .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 2;
+}
+.contentInterview .footer footer {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    box-sizing: border-box;
+    font-size: 0;
+    text-align: center;
+}
+.contentInterview .footer footer > p {
+    display: inline-block;
+    font: 12px "Black";
+    background: rgba(0,0,0,.3);
+    color: #999;
+    padding: 3px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.contentInterview .footer footer .fav {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 25px 0 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.contentInterview .footer footer .fav > img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.contentInterview > img {
+    width: 450px;
+    display: block;
+    z-index: 1;
+}
+
+.contentShort time {
+    width: 110px;
+    top: -20px;
+    left: 50%;
+    margin-left: -55px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    padding: 5px 0;
+    font-size: 11px;
+    border-radius: 2px 2px 0 0;
+    background: #fff;
+    color: #222;
+    text-align: center;
+}
+.contentShort > p {
+    margin: 35px 25px 0;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+.contentShort cite {
+    display: block;
+    margin: 15px 25px 0;
+    font: 1em "Lobster";
+}
+.contentShort img {
+    width: 450px;
+    display: block;
+    margin: 35px auto 0;
+}
+.contentShort > p.big {
+    margin: 30px 25px 0;
+    font-size: 1.25em;
+    line-height: 1.35em;
+}
+.contentShort small {
+    display: block;
+    margin-top: 15px;
+    font: .75em "Italic";
+    text-align: center;
+    color: #999;
+}
+.contentShort footer {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 30px 0 35px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0;
+}
+.contentShort footer > p {
+    display: inline-block;
+    font: 12px "Black";
+    background: #eee;
+    color: #000;
+    padding: 3px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.articles {
+    max-width: 100%;
+    min-width: 320px;
+}
+.articles .picture {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+.articles .large_picture {
+    max-width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+.articles .picture > img, .articles .large_picture > img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+.articles .wrapper_words {
+    max-width: 1200px;
+    min-width: 320px;
+    background: #fff;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+.articles .wrapper_words h1 {
+    font: 4.5em "Merriweather";
+    line-height: 1.2em;
+    text-align: center;
+    margin: 60px auto 0;
+    padding: 0 5%;
+}
+.articles .wrapper_words > hr {
+    margin: 60px auto 0;
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #222;
+    border: none;
+}
+.articles .wrapper_words .words {
+    max-width: 600px;
+    min-width: 320px;
+    background: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.articles .wrapper_words .words h2 {
+    font: 1.5em "Merriweather";
+    line-height: 1.2em;
+    margin: 60px auto 0;
+}
+.articles .wrapper_words .words p {
+    font-size: 1.1em;
+    margin-top: 40px;
+    line-height: 1.6em;
+    color: #333;
+}
+.articles .wrapper_words .words p span {
+    font: 1em 'Italic';
+    color: #000;
+}
+.articles .wrapper_words .words p small {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #999;
+    font: .75em 'Italic';
+}
+.articles .wrapper_words .words p.bold {
+    font: 1.3em 'Bold';
+    line-height: 1.4em;
+    margin: 50px auto 0;
+    color: #000;
+}
+.articles .wrapper_words .words p:nth-child(2) {
+    margin: 50px auto 0;
+}
+.articles .wrapper_words .words p.one::first-letter {
+    font: 4em 'Lobster';
+    line-height: 0;
+    color: #000;
+}
+.articles .wrapper_words .words iframe {
+    margin-top: 60px;
+}
+.articles .wrapper_words .words cite {
+    display: block;
+    margin-top: 35px;
+    font: 1.4em/1.3em "Lobster";
+    padding: 0 20px;
+    text-align: center;
+    color: #000;
+}
+.articles .wrapper_words .words > hr{
+    margin: 40px auto 0;
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #222;
+    border: none;
+}
+.articles .picture figure, .articles .wrapper_words .words figure {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+.articles .picture figure figcaption, .articles .wrapper_words .words figure figcaption {
+    padding-top: 20px;
+    font: .75em "Italic";
+    color: #999;
+}
+.articles .picture figure > img, .articles .wrapper_words .words figure > img {
+    display: block;
+}
+.articles .wrapper_words .words ul {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 35px 0 0 15px;
+}
+.articles .wrapper_words .words ul li {
+    list-style: disc outside;
+    padding: 10px 0 0 10px;
+    font-family: "Lobster";
+    color: #000;
+}
+.articles .wrapper_words .words ul.text > li {
+    font-family: "Regular";
+    line-height: 1.3em;
+    font-size: .9375em;
+    color: #000;
+
+}
+.articles .wrapper_words .words ul li:first-child {
+    padding-top: 0;
+}
+.articles .wrapper_words .words a {
+    color: #1c7eb0;
+    border-bottom: 1px solid #ccc;
+}
+.articles .wrapper_words .bottom_article {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+.articles .wrapper_words .bottom_article p {
+    display: inline-block;
+    font: 14px "Black";
+    background: #eee;
+    padding: 3px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.articles .wrapper_words .bottom_article .fav {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 25px 0 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.articles .wrapper_words .bottom_article .fav > img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+main > footer {
+    width: 100%;
+    background: #fff;
+    margin: 70px auto 0;
+    padding: 35px;
+    box-sizing: border-box;
+}
+main > footer p {
+    width: 950px;
+    margin: 0 auto;
+    font-size: .75em;
+    color: #999;
+    line-height: 1.5em;
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+@media screen and (max-width: 1200px) {
+
+    .previewProject a .infoCenter {
+        top: 150px;
+    }
+}
+@media screen and (max-width: 990px) {
+    main > header, .choose {
+        width: calc(100% - 50px);
+    }
+    .chooseElement {
+        display: block;
+        margin: 20px auto 0;
+    }
+    .content {
+        width: 450px;
+    }
+    main > footer p {
+        width: 100%;
+    }
+    .previewProject a .infoCenter {
+        top: 17%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .previewProject > a.allProjects {
+        bottom: 110px;
+    }
+}
+@media screen and (max-width: 820px) {
+    .previewProject > a.allProjects {
+        bottom: 80px;
+    }
+    .articles .wrapper_words .words {
+        padding: 0 25px;
+    }
+    .articles .wrapper_words h1 {
+        font-size: 3.5em;
+    }
+
+}
+@media screen and (max-width: 740px) {
+    .previewProject > a.allProjects {
+        bottom: 60px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .previewProject a .infoCenter h2 {
+        font-size: 3.5em;
+    }
+    .previewProject a .infoCenter p {
+        font-size: 1.3em;
+    }
+    .previewProject > a.allProjects {
+        bottom: 60px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .choose h1 {
+        font-size: 3.125em;
+    }
+    .choose .elements ul li {
+        padding-left: 30px;
+        font-size: 1.5em;
+    }
+    .articles .wrapper_words h1 {
+        font-size: 3em;
+    }
+    .previewProject a .infoCenter {
+        background: rgba(255,255,255,.5);
+        top: 13%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .previewProject a .infoCenter p {
+        margin-top: 30px;
+    }
+    .previewProject > a.allProjects {
+        bottom: 40px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .previewProject a .infoCenter {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    .previewProject a .infoCenter h2 {
+        font-size: 2.5em;
+    }
+    .previewProject a .infoCenter p {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .choose .elements ul li {
+        padding-left: 20px;
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 450px) {
+    main > header, .choose {
+        width: 100%;
+    }
+    .choose h1 {
+        font-size: 1.875em;
+    }
+    .chooseElement {
+        margin: 0 auto 0;
+    }
+    .previewProject a .infoCenter h2 {
+        font-size: 2em;
+    }
+    .previewProject a .infoCenter p {
+        margin-top: 30px;
+        padding: 0 20px;
+        font-size: 1em;
+    }
+    .content {
+        width: 100%;
+    }
+    .contentItem {
+        width: 100%;
+    }
+    .contentArticle header img,
+    .contentInterview img,
+    .contentShort img {
+        width: 100%;
+        height: auto;
+    }
+    .contentArticle h2 {
+        margin: 11.11111111% 5.555555556%;
+    }
+    .contentArticle footer {
+        padding: 0 5.555555556%;
+        margin: 0 0 6.666666667%;
+
+    }
+    .contentInterview .header {
+        bottom: 20%;
+    }
+    .contentInterview .header p {
+        bottom: 30%;
+        left: 5.555555556%;
+        right: 5.555555556%;
+    }
+    .contentInterview .header h2 {
+        left: 5.555555556%;
+        right: 5.555555556%;
+    }
+    .contentInterview .header h2.video {
+        font-size: 2.1875em;
+        top: 13.33333333%;
+        left: 20%;
+        right: 20%;
+    }
+    .contentInterview .footer {
+        bottom: 6.666666667%;
+
+    }
+    .contentInterview .footer footer {
+        padding: 0 5.555555556%;
+    }
+    .contentShort > p {
+        margin: 7.777777778% 5.555555556% 0;
+    }
+    .contentShort cite {
+        margin: 3.333333333% 5.555555556% 0;
+    }
+    .contentShort > p.big {
+        margin: 7.777777778% 5.555555556%;
+        font-size: 1.25em;
+        line-height: 1.35em;
+    }
+    .contentShort footer {
+        padding: 0 5.555555556%;
+        margin: 7.777777778% 0 6.666666667%;
+    }
+    .articles .wrapper_words h1 {
+        font-size: 2.5em;
+    }
+    .articles .wrapper_words .words p {
+        font-size: .875em;
+    }
+    .articles .wrapper_words .words p.bold {
+        font-size: 1em;
+
+    }
+    .articles .wrapper_words .words ul li {
+        font-size: .875em;
+    }
+    .articles .wrapper_words .words h2 {
+        font-size: 1.5em;
+    }
+    .articles .wrapper_words .words cite {
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 390px) {
+    .choose .elements ul {
+        margin: 10px auto 0;
+        padding: 0;
+    }
+    .choose .elements ul li {
+        display: block;
+        padding: 15px 0 0;
+        font-size: 1.2em;
+    }
+    .previewProject a .infoCenter {
+        top: 10px;
+    }
+    .previewProject a .infoCenter h2 {
+        font-size: 1.5em;
+    }
+    .previewProject a .infoCenter p {
+        margin-top: 20px;
+    }
+    .previewProject > a.allProjects {
+        bottom: 15px;
+    }
+    .contentArticle h2 {
+        font-size: 1.4em;
+    }
+    .contentInterview .header {
+        bottom: 20%;
+    }
+    .contentInterview .header p {
+        font-size: 1em;
+        line-height: 1.3em;
+    }
+    .contentInterview .header h2 {
+        font-size: 1.4em;
+    }
+    .contentInterview .footer {
+        bottom: 6.666666667%;
+
+    }
+    .contentInterview .footer footer {
+        padding: 0 5.555555556%;
+    }
+    .contentShort > p.big {
+        font-size: 1.0625em;
+        line-height: 1.3em;
+    }
+    .articles .wrapper_words h1 {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 320px) {
+    .contentInterview .header h2.video {
+        left: 10%;
+        right: 10%;
+    }
+    .tags form {
+        margin: 35px 0;
+        overflow: scroll;
+    }
+
+}
