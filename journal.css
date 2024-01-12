@@ -1,3 +1,9 @@
+body {
+    background-color: #F7F7FC;
+    font-family: 'Roboto', sans-serif;
+}
+
+
 
 .journal-index .wrapper,
 .journal-article .wrapper {
